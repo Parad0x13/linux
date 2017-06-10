@@ -9,7 +9,3 @@ Make it so I can easily check what 'scripts' I have installed
 
 Make it so that strippystrip tells you how much space you saved
 
-Add auto install, remove git repo by going into parent, and prompting for override for all config files
-
-Add a message that shows alias and greets user with script version
-
