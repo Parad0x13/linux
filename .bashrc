@@ -110,8 +110,8 @@ if ! shopt -oq posix; then
 fi
 
 alias la='ls -la'
-
 alias cd..='cd ..'
+alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 
 # Simply strip all symbols from a binary
 strippystrip() {
