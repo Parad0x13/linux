@@ -7,5 +7,5 @@ cp -i ./.gitconfig ~/
 cp -i ./.inputrc ~/
 cp -i ./.vimrc ~/
 
-echo Install finished
+echo Install finished, be sure to check your new aliases!
 

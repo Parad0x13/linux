@@ -113,3 +113,6 @@ fi
 alias strippystrip='strip --strip-debug --strip-unneeded'
 
 alias la='ls -la'
+
+alias cd..='cd ..'
+
