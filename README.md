@@ -1,4 +1,4 @@
 # linux
 Personal customization for Linux distros
 
-`git clone https://github.com/Parad0x13/linux.git ~/`
+Until I find a better way to do this simply clone the repo and manually replace the files in ~/
