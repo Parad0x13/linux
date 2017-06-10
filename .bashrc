@@ -109,10 +109,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Simple alias to strip all symbols from a binary
-alias strippystrip='strip --strip-debug --strip-unneeded'
-
 alias la='ls -la'
 
 alias cd..='cd ..'
+
+# Simply strip all symbols from a binary
+strippystrip() {
+	a=$(stat --printf="%s" $1)
+	strip --strip-debug --strip-unneeded $1
+	b=$(stat --printf="%s" $1)
+	let delta=$a-$b
+	echo Was able to strip $delta bytes from $1
+}
 
