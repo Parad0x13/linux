@@ -111,3 +111,5 @@ fi
 
 # Simple alias to strip all symbols from a binary
 alias strippystrip='strip --strip-debug --strip-unneeded'
+
+alias la='ls -la'
