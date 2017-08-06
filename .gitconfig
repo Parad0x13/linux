@@ -1,3 +1,5 @@
 [user]
 	name = Bryan A. Tremblay
 	email = bryanandhallie@gmail.com
+[push]
+	default = simple
