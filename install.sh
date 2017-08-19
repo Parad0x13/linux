@@ -9,11 +9,5 @@ cp -i ./.vimrc ~/
 cp -i ./.tmux.conf ~/
 cp -i ./.gdbinit ~/
 
-echo Attempting to install ssh certs
-mkdir ~/.ssh
-cp -i ./id_rsa_git ~/.ssh/
-cp -i ./id_rsa_git.pub ~/.ssh/
-ssh-add ~/.ssh/id_rsa_git
-
 echo Install finished, be sure to check your new aliases!
 
