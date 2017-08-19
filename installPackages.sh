@@ -7,7 +7,7 @@
 # apt list --installed
 # apt-cache search .
 
-printf "Package Installer v1.0\n\n"
+printf "Package Installer v1.1\n\n"
 
 packages=()
 
@@ -99,9 +99,9 @@ fi
 
 # Environment
 if [ "$media" == 1 ] || [ "$all" == 1 ]; then
-	packages+=(chromium-browser)
+	#packages+=(chromium-browser)
 	packages+=(docker)
-	packages+=(firefox)
+	#packages+=(firefox)
 	packages+=(sic)
 	packages+=(vlc)
 fi
@@ -195,3 +195,5 @@ done
 # Final
 yes | sudo apt-get update  > /dev/null
 yes | sudo apt-get dist-upgrade  > /dev/null
+
+echo Consider grabbing Chrome and installing with dpkg -i package.deb
