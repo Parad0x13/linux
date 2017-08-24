@@ -136,6 +136,8 @@ if [ "$development" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(codeblocks)
 	packages+=(eclipse)
 	packages+=(npm)
+
+	packages+=(valgrind)
 fi
 
 # Networking
@@ -191,6 +193,8 @@ do
 	time yes | sudo apt-get install $package > /dev/null
 	echo
 done
+
+echo Processing apt-get updates
 
 # Final
 yes | sudo apt-get update  > /dev/null
