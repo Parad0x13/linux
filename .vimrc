@@ -1,7 +1,7 @@
 set number
 syntax on
 
-colorscheme darkblue
+colorscheme default
 
 set tabstop=4
 set shiftwidth=4

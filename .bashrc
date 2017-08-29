@@ -123,3 +123,13 @@ strippystrip() {
 	echo Was able to strip $delta bytes from $1
 }
 
+tmux-dev() {
+	tmux new-session -d
+	tmux split-window -h
+	tmux selectp -t 0
+	tmux split-window -v 'top'
+	tmux split-window -h 'dmesg -wH'
+	tmux selectp -t 0
+	tmux -2 attach-session -d
+}
+
