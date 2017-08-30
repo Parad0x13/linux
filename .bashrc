@@ -121,6 +121,18 @@ f() {
 	fi
 }
 
+halp() {
+	echo find something
+	echo "    find / -name 'something'"
+
+	echo
+	echo tmux
+	echo "    ctrl+a"
+	echo "    | -"
+	echo "    z = zoom"
+	echo "    d = detach, aka close out of all tmux"
+}
+
 # Simply strip all symbols from a binary
 strippystrip() {
 	a=$(stat --printf="%s" $1)
@@ -139,4 +151,6 @@ tmux-dev() {
 	tmux selectp -t 0
 	tmux -2 attach-session -d
 }
+
+echo Linux Environment v1.2 [f halp strippystrip tmux-dev]
 
