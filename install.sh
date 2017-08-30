@@ -19,5 +19,6 @@ case "$choice" in
 	y|Y ) git config --global credential.helper 'cache --timeout 7200'
 esac
 
+echo
 echo Install finished, be sure to check your new aliases!
 

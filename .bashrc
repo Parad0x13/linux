@@ -114,6 +114,13 @@ alias la='ls -la'
 alias cd..='cd ..'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 
+# Just a nice macro is all : 3
+f() {
+	if [ $# -eq 1 ]; then
+		find / -name "*$1*" 2>/dev/null
+	fi
+}
+
 # Simply strip all symbols from a binary
 strippystrip() {
 	a=$(stat --printf="%s" $1)
