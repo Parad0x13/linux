@@ -114,6 +114,9 @@ alias la='ls -la'
 alias cd..='cd ..'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 
+customFunctions=()
+
+customFunctions+=(f)
 # Just a nice macro is all : 3
 f() {
 	if [ $# -eq 1 ]; then
@@ -121,6 +124,7 @@ f() {
 	fi
 }
 
+customFunctions+=(halp)
 halp() {
 	echo find something
 	echo "    find / -name 'something'"
@@ -134,6 +138,7 @@ halp() {
 }
 
 # Simply strip all symbols from a binary
+customFunctions+=(strippystrip)
 strippystrip() {
 	a=$(stat --printf="%s" $1)
 	strip --strip-debug --strip-unneeded $1
@@ -142,6 +147,7 @@ strippystrip() {
 	echo Was able to strip $delta bytes from $1
 }
 
+customFunctions+=(tmux-dev)
 tmux-dev() {
 	tmux new-session -d
 	tmux split-window -h
@@ -152,5 +158,18 @@ tmux-dev() {
 	tmux -2 attach-session -d
 }
 
-echo Linux Environment v1.2 [f halp strippystrip tmux-dev]
+#printf "Linux Environment v1.4 ["
+#for function in "${customFunctions[@]}"
+#do
+#	printf "%s " $function
+#done
+#printf "]\n"
+
+introduction=""
+for function in "${customFunctions[@]}"
+do
+	introduction+="$function "
+done
+introduction=`echo $introduction`
+echo "Linux Environment v1.4 [$introduction]"
 
