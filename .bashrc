@@ -113,6 +113,7 @@ alias c='clear'
 alias la='ls -la'
 alias cd..='cd ..'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
+alias mist='~/Desktop/mist/mist.sh'
 
 customFunctions=()
 
@@ -171,5 +172,5 @@ do
 	introduction+="$function "
 done
 introduction=`echo $introduction`
-echo "Linux Environment v1.4 [$introduction]"
+echo "Linux Environment v1.5 [$introduction]"
 
