@@ -121,7 +121,7 @@ customFunctions+=(f)
 # Just a nice macro is all : 3
 f() {
 	if [ $# -eq 1 ]; then
-		find / -name "*$1*" 2>/dev/null
+		find ./ -name "*$1*" 2>/dev/null
 	fi
 }
 
