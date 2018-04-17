@@ -134,7 +134,7 @@ if [ "$development" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(pylint)
 	packages+=(tidy)
 
-	packages+=(codeblocks)
+	#packages+=(codeblocks)
 	packages+=(eclipse)
 	packages+=(npm)
 
