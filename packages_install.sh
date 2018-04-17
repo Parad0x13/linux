@@ -140,6 +140,8 @@ if [ "$development" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(npm)
 
 	packages+=(valgrind)
+
+	packages+=(python3-pip)
 fi
 
 # Networking
