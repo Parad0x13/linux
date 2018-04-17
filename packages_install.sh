@@ -98,7 +98,7 @@ if [ "$media" == 1 ] || [ "$all" == 1 ]; then
 fi
 
 # Environment
-if [ "$media" == 1 ] || [ "$all" == 1 ]; then
+if [ "$environment" == 1 ] || [ "$all" == 1 ]; then
 	#packages+=(chromium-browser)
 	packages+=(docker)
 	#packages+=(firefox)
@@ -107,7 +107,7 @@ if [ "$media" == 1 ] || [ "$all" == 1 ]; then
 fi
 
 # Gaming
-if [ "$utility" == 1 ] || [ "$all" == 1 ]; then
+if [ "$gaming" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(crafty)
 	packages+=(steam)
 fi
