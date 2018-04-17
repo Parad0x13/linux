@@ -3,6 +3,7 @@
 # [TODO] Review/prioritize install size/duration
 # [TODO] Add explainations for each entry
 # [TODO] Don't have it install if the package is already installed
+# [TODO] Add VSCode to this as opposed to codeblocks
 
 # [INFO]
 # apt list --installed
