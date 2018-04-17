@@ -2,14 +2,12 @@
 
 # [TODO] Review/prioritize install size/duration
 # [TODO] Add explainations for each entry
-# [TODO] Don't have it install if the package is already installed
-# [TODO] Add VSCode to this as opposed to codeblocks
 
 # [INFO]
 # apt list --installed
 # apt-cache search .
 
-printf "Package Installer v1.1\n\n"
+printf "Package Installer v1.2\n\n"
 
 packages=()
 
@@ -190,11 +188,15 @@ if [ "$interesting" == 1 ] || [ "$all" == 1 ]; then
 fi
 
 # Install all the things!!!
-TIMEFORMAT=%Rs
 for package in "${packages[@]}"
 do
-	printf "Processing %s\n" $package
-	time yes | sudo apt-get install $package > /dev/null
+	PKG_OK=$(dpkg-query -W --showformat='${Status}\n' ${package}|grep "install ok installed")
+	if [ "" == "$PKG_OK" ]; then
+		printf "Processing %s\n" $package
+		time yes | sudo apt-get install $package > /dev/null
+	else
+		printf "Already processed %s\n" $package
+	fi
 	echo
 done
 
@@ -203,5 +205,3 @@ echo Processing apt-get updates
 # Final
 yes | sudo apt-get update  > /dev/null
 yes | sudo apt-get dist-upgrade  > /dev/null
-
-echo Consider grabbing Chrome and installing with dpkg -i package.deb
