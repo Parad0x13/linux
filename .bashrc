@@ -159,12 +159,18 @@ tmux-dev() {
 	tmux -2 attach-session -d
 }
 
-#printf "Linux Environment v1.4 ["
-#for function in "${customFunctions[@]}"
-#do
-#	printf "%s " $function
-#done
-#printf "]\n"
+# Opens my favorite default tmux session
+customFunctions+=(gogogo)
+gogogo() {
+	tmux new-session -d
+	tmux split-window -h
+	tmux selectp -t 0
+	tmux split-window -v
+	tmux selectp -t 1
+	tmux split-window -h
+	tmux selectp -t 0
+	tmux -2 attach-session -d
+}
 
 introduction=""
 for function in "${customFunctions[@]}"
@@ -172,5 +178,5 @@ do
 	introduction+="$function "
 done
 introduction=`echo $introduction`
-echo "Linux Environment v1.5 [$introduction]"
+echo "Linux Environment v1.6 [$introduction]"
 
