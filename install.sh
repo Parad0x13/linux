@@ -21,4 +21,3 @@ esac
 
 echo
 echo Install finished, be sure to check your new aliases!
-
