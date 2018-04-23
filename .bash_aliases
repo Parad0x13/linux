@@ -3,6 +3,8 @@ alias la='ls -la'
 alias cd..='cd ..'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias mist='~/Desktop/mist/mist.sh'
+# Opens my favorite default tmux session
+alias gogogo='tmux new-session \; split-window -h \; selectp -t 0 \; split-window -v \; selectp -t 1 \; split-window -h \; selectp -t 0'
 
 customFunctions=()
 
@@ -20,7 +22,7 @@ halp() {
 	echo "    find / -name 'something'"
 
 	echo
-	echo tmux
+	echo tmux (gogogo)
 	echo "    ctrl+a"
 	echo "    | -"
 	echo "    z = zoom"
@@ -37,35 +39,10 @@ strippystrip() {
 	echo Was able to strip $delta bytes from $1
 }
 
-customFunctions+=(tmux-dev)
-tmux-dev() {
-	tmux new-session -d
-	tmux split-window -h
-	tmux selectp -t 0
-	tmux split-window -v 'top'
-	tmux split-window -h 'dmesg -wH'
-	tmux selectp -t 0
-	tmux -2 attach-session -d
-}
-
-# Opens my favorite default tmux session
-customFunctions+=(gogogo)
-gogogo() {
-	tmux new-session -d
-	tmux split-window -h
-	tmux selectp -t 0
-	tmux split-window -v
-	tmux selectp -t 1
-	tmux split-window -h
-	tmux selectp -t 0
-	tmux -2 attach-session -d
-}
-
 introduction=""
 for function in "${customFunctions[@]}"
 do
 	introduction+="$function "
 done
 introduction=`echo $introduction`
-echo "Linux Environment v1.6 [$introduction]"
-
+echo "Linux Environment v1.7 [$introduction]"
