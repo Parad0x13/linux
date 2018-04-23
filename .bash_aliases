@@ -18,11 +18,11 @@ f() {
 
 customFunctions+=(halp)
 halp() {
-	echo find something
+	echo "find something"
 	echo "    find / -name 'something'"
 
 	echo
-	echo tmux (gogogo)
+	echo "tmux (gogogo)"
 	echo "    ctrl+a"
 	echo "    | -"
 	echo "    z = zoom"
