@@ -1,4 +1,4 @@
-minimal settings v1.0
+minimal settings v1.1
 
 .vimrc
 syntax on
@@ -28,5 +28,4 @@ bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
-set -sg escape-time 0
 
