@@ -1,0 +1,32 @@
+minimal settings v1.0
+
+.vimrc
+syntax on
+colorscheme default
+set number cursorline
+set tabstop=4 shiftwidth=4 softtabstop=4
+autocmd BufWritePre * :%s/\s\+$//e
+
+.bash_aliases
+alias c='clear'
+alias la='ls -la'
+alias cd..='cd ..'
+alias gogogo='tmux new-session \; split-window -h \; selectp -t 0 \;\
+split-window -v \; selectp -t 1 \; split-window -h \; selectp -t 0'
+f() { find ./ -name "*$1*" 2>/dev/null; }
+
+.intputrc
+set completion-ignore-case on
+
+.tmux.conf
+set -g prefix C-a
+bind C-a send-prefix
+bind-key | split-window -h
+bind-key - split-window -v
+set -g mouse on
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+set -sg escape-time 0
+
