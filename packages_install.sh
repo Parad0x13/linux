@@ -68,7 +68,7 @@ packages+=(p7zip-full)
 packages+=(vim)
 
 packages+=(lynx)
-packages+=(tmux)
+packages+=(terminator)
 
 packages+=(python)
 
