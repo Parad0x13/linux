@@ -17,6 +17,14 @@ f() {
 	fi
 }
 
+customFunctions+=(h)
+# I hate having to type all of hexdump stuff out all the time
+h() {
+	if [ $# -eq 1 ]; then
+		hexdump -C "$1" | less
+	fi
+}
+
 customFunctions+=(halp)
 halp() {
 	echo "find something"
