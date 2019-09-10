@@ -3,6 +3,7 @@ alias la='ls -la'
 alias cd..='cd ..'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias mist='~/Desktop/mist/mist.sh'
+alias dush='du -sh'
 # Opens my favorite default tmux session
 alias gogogo='tmux new-session \; split-window -h \; selectp -t 0 \; split-window -v \; selectp -t 1 \; split-window -h \; selectp -t 0'
 
