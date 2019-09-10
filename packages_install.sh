@@ -140,6 +140,8 @@ if [ "$development" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(valgrind)
 
 	packages+=(python3-pip)
+
+	packages+=(qemu)
 fi
 
 # Networking
