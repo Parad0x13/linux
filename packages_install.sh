@@ -164,6 +164,7 @@ if [ "$re" == 1 ] || [ "$all" == 1 ]; then
 	packages+=(fuzz)
 	packages+=(ophcrack)
 	packages+=(pdfcrack)
+	packages+=(binwalk)
 fi
 
 # Mathematics
