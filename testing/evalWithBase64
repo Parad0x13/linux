@@ -1,0 +1,10 @@
+I'm trying to make a way to copy to clipboard some simple macros for ssh shells that don't have my own stuff in it.
+
+E.g. I've been able to get something like this sofar:
+base64 -w 0 someInputFileWithFunctions | xclip -section -clipboard
+
+Then I bring it back to plaintext on the distant end with:
+echo ZnVuY3Rpb24gYyB7IGNsZWFyIH07CmZ1bmN0aW9uIGYgeyBmaW5kIC4vIC1uYW1lICIqJDEqIiAyPi9kZXYvbnVsbCB9OwpmdW5jdGlvbiBoIHsgaGV4ZHVtcCAtQyAiJDEiIHwgbGVzcyB9OwpmdW5jdGlvbiBkdXNoIHsgZHUgLXNoIH07CmZ1bmN0aW9uIHVuc2V0Q3VzdG9tRnVuY3Rpb25zIHsgdW5zZXQgLWYgYyBkdXNoIGYgaCBsaXN0Q3VzdG9tIHVuc2V0Q3VzdG9tRnVuY3Rpb25zIH07CgpmdW5jdGlvbiBsaXN0Q3VzdG9tIHsKCXByaW50ICJcLVwtPT0gQ3VzdG9tIGZ1bmN0aW9ucyBoYXZlIGJlZW4gY3JlYXRlZCA9PVwtXC0iOwoJcHJpbnQgImMgPSBjbGVhciI7CglwcmludCAiZiA9IGZpbmQgLi8gLW5hbWUgXCIqJDEqXCIgMj4vZGV2L251bGwiOwoJcHJpbnQgImggPSBoZXhkdW1wIC1DIFwiJDFcIiB8IGxlc3MiOwoJcHJpbnQgImR1c2ggPSBkdSAtc2giOwoJcHJpbnQgImxpc3RDdXN0b20gPSBsaXN0IGFsbCBjdXN0b20gZnVuY3Rpb25zIjsKCXByaW50ICJ1bnNldEN1c3RvbUZ1bmN0aW9ucyA9IHJlbW92ZXMgYWxsIGN1c3RvbSBmdW5jdGlvbnMiOwp9OwoKbGlzdEN1c3RvbTsKCg== | base64 -d
+
+However I can't seem to get it to 'eval' correctly! I'm totally lost...
+
