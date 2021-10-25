@@ -22,5 +22,5 @@ esac
 
 echo
 echo Install finished, be sure to check your new aliases!
-echo If using zsh make sure to add source ~/.bash_aliases to your .zshrc file
+echo If using zsh make sure to add "source ~/.bash_aliases" to the end of your .zshrc file
 
